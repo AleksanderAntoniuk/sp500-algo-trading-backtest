@@ -1,0 +1,17 @@
+{
+  "source": "yahoo_spy",
+  "csv_path": "",
+  "price_col": "Adj Close",
+  "date_col": "Date",
+  "start_date": "1993-02-01",
+  "lookback_days": 378,
+  "buy_th": -0.040,
+  "sell_th": 0.110,
+  "hysteresis": 0.0075,
+  "signal_lag_days": 1,
+  "min_hold_days": 5,
+  "tcost_bps": 2.0,
+  "start_invested": true,
+  "cash_when_flat": "TBILL",
+  "tbill_series": "TB3MS"
+}
