@@ -1,10 +1,15 @@
-
 """
 run_backtest.py — DAILY-ONLY backtest runner
-- Central config: see DEFAULT_CONFIG below or edit config/config.json
-- Downloads data (Yahoo SPY by default) or reads CSV
-- Saves CSV results and PNG charts into ./data/
+
+This script:
+- Builds a Config from DEFAULT_CONFIG, optional JSON and CLI overrides
+- Loads price data (via backtest_core.load_data)
+- Runs backtest (backtest_core.backtest_df)
+- Computes and prints performance stats, saves CSV and PNG charts to `data/`
+
+Keep CLI options small and JSON-first for reproducibility.
 """
+
 import os, json, argparse, pprint
 import pandas as pd
 from backtest_core import Config, load_data, backtest_df, perf_stats, save_plots
@@ -29,12 +34,17 @@ DEFAULT_CONFIG = Config(
 )
 
 def load_json_config(path: str) -> dict:
+    """Load JSON config if present; return empty dict otherwise."""
     if path and os.path.exists(path):
         with open(path,"r",encoding="utf-8") as f:
             return json.load(f)
     return {}
 
 def merge_config(cfg: Config, overrides: dict) -> Config:
+    """
+    Apply overrides (dict) onto a Config instance in-place.
+    Only existing attributes are applied (silently ignore unknown keys).
+    """
     for k,v in overrides.items():
         if hasattr(cfg, k):
             setattr(cfg, k, v)
@@ -56,6 +66,7 @@ def main():
     ap.add_argument("--start_date")
     args = ap.parse_args()
 
+    # Build configuration: DEFAULT -> JSON -> CLI
     cfg = DEFAULT_CONFIG
     j = load_json_config(args.config)
     cfg = merge_config(cfg, j)
@@ -70,7 +81,7 @@ def main():
     df = load_data(cfg)
     out = backtest_df(df, cfg)
 
-    # Stats (daily → 252)
+    # Stats (daily -> annualized using 252)
     s_stats = perf_stats(out["rets_strategy"], periods_per_year=252)
     b_stats = perf_stats(out["rets_asset"], periods_per_year=252)
 
@@ -93,7 +104,7 @@ def main():
     print(f"\nSaved results CSV to: {csv_path}")
 
     save_plots(out["equity_strategy"], out["equity_bench"], out_dir="data")
-    print("Saved charts to: data/equity_strategy.png, data/drawdown_strategy.png, data/equity_bench.png, data/drawdown_bench.png")
+    print("Saved charts to: data/*.png")
 
 if __name__ == "__main__":
     main()

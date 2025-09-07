@@ -1,0 +1,143 @@
+{
+  "metric": "FinalMultiple",
+  "param_keys": [
+    "buy_th",
+    "sell_th"
+  ],
+  "total_combinations": 25,
+  "evaluated": 11,
+  "max_evals": 10,
+  "best": {
+    "overrides": {
+      "buy_th": -0.2,
+      "sell_th": 0.05
+    },
+    "stats": {
+      "error": "The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\aleka\\Desktop\\Quant_Projects\\sp500-algo-trading-backtest\\src\\optimize_thresholds.py\", line 99, in evaluate_config\n    rets = out.get(\"rets_strategy\") or out.get(\"rets_strategy\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\aleka\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\core\\generic.py\", line 1577, in __nonzero__\n    raise ValueError(\nValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().\n"
+    },
+    "value": -Infinity
+  },
+  "all": [
+    {
+      "combination": {
+        "buy_th": -0.2,
+        "sell_th": 0.05
+      },
+      "metric": "FinalMultiple",
+      "value": null,
+      "stats": {
+        "error": "The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().",
+        "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\aleka\\Desktop\\Quant_Projects\\sp500-algo-trading-backtest\\src\\optimize_thresholds.py\", line 99, in evaluate_config\n    rets = out.get(\"rets_strategy\") or out.get(\"rets_strategy\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\aleka\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\core\\generic.py\", line 1577, in __nonzero__\n    raise ValueError(\nValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().\n"
+      }
+    },
+    {
+      "combination": {
+        "buy_th": -0.2,
+        "sell_th": 0.1
+      },
+      "metric": "FinalMultiple",
+      "value": null,
+      "stats": {
+        "error": "The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().",
+        "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\aleka\\Desktop\\Quant_Projects\\sp500-algo-trading-backtest\\src\\optimize_thresholds.py\", line 99, in evaluate_config\n    rets = out.get(\"rets_strategy\") or out.get(\"rets_strategy\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\aleka\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\core\\generic.py\", line 1577, in __nonzero__\n    raise ValueError(\nValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().\n"
+      }
+    },
+    {
+      "combination": {
+        "buy_th": -0.2,
+        "sell_th": 0.15000000000000002
+      },
+      "metric": "FinalMultiple",
+      "value": null,
+      "stats": {
+        "error": "The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().",
+        "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\aleka\\Desktop\\Quant_Projects\\sp500-algo-trading-backtest\\src\\optimize_thresholds.py\", line 99, in evaluate_config\n    rets = out.get(\"rets_strategy\") or out.get(\"rets_strategy\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\aleka\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\core\\generic.py\", line 1577, in __nonzero__\n    raise ValueError(\nValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().\n"
+      }
+    },
+    {
+      "combination": {
+        "buy_th": -0.2,
+        "sell_th": 0.2
+      },
+      "metric": "FinalMultiple",
+      "value": null,
+      "stats": {
+        "error": "The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().",
+        "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\aleka\\Desktop\\Quant_Projects\\sp500-algo-trading-backtest\\src\\optimize_thresholds.py\", line 99, in evaluate_config\n    rets = out.get(\"rets_strategy\") or out.get(\"rets_strategy\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\aleka\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\core\\generic.py\", line 1577, in __nonzero__\n    raise ValueError(\nValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().\n"
+      }
+    },
+    {
+      "combination": {
+        "buy_th": -0.2,
+        "sell_th": 0.25
+      },
+      "metric": "FinalMultiple",
+      "value": null,
+      "stats": {
+        "error": "The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().",
+        "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\aleka\\Desktop\\Quant_Projects\\sp500-algo-trading-backtest\\src\\optimize_thresholds.py\", line 99, in evaluate_config\n    rets = out.get(\"rets_strategy\") or out.get(\"rets_strategy\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\aleka\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\core\\generic.py\", line 1577, in __nonzero__\n    raise ValueError(\nValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().\n"
+      }
+    },
+    {
+      "combination": {
+        "buy_th": -0.15000000000000002,
+        "sell_th": 0.05
+      },
+      "metric": "FinalMultiple",
+      "value": null,
+      "stats": {
+        "error": "The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().",
+        "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\aleka\\Desktop\\Quant_Projects\\sp500-algo-trading-backtest\\src\\optimize_thresholds.py\", line 99, in evaluate_config\n    rets = out.get(\"rets_strategy\") or out.get(\"rets_strategy\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\aleka\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\core\\generic.py\", line 1577, in __nonzero__\n    raise ValueError(\nValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().\n"
+      }
+    },
+    {
+      "combination": {
+        "buy_th": -0.15000000000000002,
+        "sell_th": 0.1
+      },
+      "metric": "FinalMultiple",
+      "value": null,
+      "stats": {
+        "error": "The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().",
+        "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\aleka\\Desktop\\Quant_Projects\\sp500-algo-trading-backtest\\src\\optimize_thresholds.py\", line 99, in evaluate_config\n    rets = out.get(\"rets_strategy\") or out.get(\"rets_strategy\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\aleka\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\core\\generic.py\", line 1577, in __nonzero__\n    raise ValueError(\nValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().\n"
+      }
+    },
+    {
+      "combination": {
+        "buy_th": -0.15000000000000002,
+        "sell_th": 0.15000000000000002
+      },
+      "metric": "FinalMultiple",
+      "value": null,
+      "stats": {
+        "error": "The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().",
+        "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\aleka\\Desktop\\Quant_Projects\\sp500-algo-trading-backtest\\src\\optimize_thresholds.py\", line 99, in evaluate_config\n    rets = out.get(\"rets_strategy\") or out.get(\"rets_strategy\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\aleka\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\core\\generic.py\", line 1577, in __nonzero__\n    raise ValueError(\nValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().\n"
+      }
+    },
+    {
+      "combination": {
+        "buy_th": -0.15000000000000002,
+        "sell_th": 0.2
+      },
+      "metric": "FinalMultiple",
+      "value": null,
+      "stats": {
+        "error": "The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().",
+        "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\aleka\\Desktop\\Quant_Projects\\sp500-algo-trading-backtest\\src\\optimize_thresholds.py\", line 99, in evaluate_config\n    rets = out.get(\"rets_strategy\") or out.get(\"rets_strategy\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\aleka\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\core\\generic.py\", line 1577, in __nonzero__\n    raise ValueError(\nValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().\n"
+      }
+    },
+    {
+      "combination": {
+        "buy_th": -0.15000000000000002,
+        "sell_th": 0.25
+      },
+      "metric": "FinalMultiple",
+      "value": null,
+      "stats": {
+        "error": "The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().",
+        "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\aleka\\Desktop\\Quant_Projects\\sp500-algo-trading-backtest\\src\\optimize_thresholds.py\", line 99, in evaluate_config\n    rets = out.get(\"rets_strategy\") or out.get(\"rets_strategy\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\aleka\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\core\\generic.py\", line 1577, in __nonzero__\n    raise ValueError(\nValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().\n"
+      }
+    }
+  ]
+}

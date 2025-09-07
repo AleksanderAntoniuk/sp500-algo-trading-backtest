@@ -1,9 +1,15 @@
 """
-backtest_core.py — DAILY-ONLY mean-reversion backtest utilities for S&P 500
-- Daily returns, trailing N-day total return, next-day execution
-- No shorting; benchmark = Buy & Hold
-- All tunables surfaced via Config dataclass (see below)
+backtest_core.py — core backtest utilities
+
+This module provides:
+- Config dataclass (strategy + data settings)
+- data fetch/load helpers
+- daily returns, trailing N-day total return
+- signal generation (elementwise, stateful)
+- backtest_df returns daily series for asset, strategy, positions and equities
+- perf_stats and simple plot saving
 """
+
 from __future__ import annotations
 
 import numpy as np
@@ -23,15 +29,15 @@ class Config:
 
     # Strategy (DAILY-ONLY)
     lookback_days: int = 252      # trailing window in trading days
-    buy_th: float = -0.017        # e.g., -1.7% (30th percentile from 97y histogram)
-    sell_th: float = 0.111        # e.g., +11.1% (median from 97y histogram)
-    hysteresis: float = 0.0       # extra buffer to reduce whipsaws (e.g., 0.005 = 0.5%)
-    signal_lag_days: int = 1      # execute next day
-    min_hold_days: int = 0        # optional minimum holding period
+    buy_th: float = -0.017        # threshold for entry (decimal)
+    sell_th: float = 0.111        # threshold for exit (decimal)
+    hysteresis: float = 0.0       # small buffer to reduce whipsaw
+    signal_lag_days: int = 1      # execute after N calendar days (shift)
+    min_hold_days: int = 0        # minimum holding period to avoid churn
 
     # Costs / realism
-    tcost_bps: float = 2.0        # per position change
-    start_invested: bool = True   # initial position
+    tcost_bps: float = 2.0        # transaction cost (basis points)
+    start_invested: bool = True   # start in position by default
 
 # ========================== Data acquisition ==========================
 def fetch_yahoo(symbol: str, start="1990-01-01", auto_adjust=True) -> pd.DataFrame:
